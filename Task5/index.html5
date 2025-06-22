@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 5</title>
+</head>
+<body>
+  <button onclick="handleClick()">Click me</button>
+
+  <script>
+    function handleClick() {
+      let numbers = [];
+      for (let i = 0; i <= 100; i++) {
+        numbers.push(i);
+      }
+
+      const evenNumbers = numbers.filter(n => n % 2 === 0);
+      const sum = evenNumbers.reduce((acc, num) => acc + num, 0);
+      console.log("Sum of even numbers from 0 to 100:", sum);
+    }
+  </script>
+</body>
+</html>
+E0F
+E0F

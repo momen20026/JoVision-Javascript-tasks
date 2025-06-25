@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 8 - Even or Odd</title>
+</head>
+<body>
+
+  <input type="number" id="numberInput" placeholder="Enter a number">
+  <button onclick="checkNumber()">Check</button>
+
+  <script>
+    function checkNumber() {
+      const num = parseInt(document.getElementById("numberInput").value);
+      if (isNaN(num)) {
+        console.log("Please enter a valid number.");
+      } else if (num % 2 === 0) {
+        console.log(num + " is Even");
+      } else {
+        console.log(num + " is Odd");
+      }
+    }
+  </script>
+
+</body>
+</html>

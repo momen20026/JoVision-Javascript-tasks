@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 7 - Clock</title>
+</head>
+<body>
+
+  <h1 id="clock"></h1>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById("clock").textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    updateClock(); // عرض أول مرة
+    setInterval(updateClock, 1000); // تحديث كل ثانية
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 15 - Average Calculator</title>
+</head>
+<body>
+
+  <input type="text" id="numbersInput" placeholder="Enter numbers separated by commas">
+  <button id="avgBtn">Calculate Average</button>
+
+  <script>
+    document.getElementById("avgBtn").addEventListener("click", function () {
+      const input = document.getElementById("numbersInput").value.trim();
+
+      if (!input) {
+        console.log("Please enter some numbers.");
+        return;
+      }
+
+      const array = input.split(",").map(num => parseFloat(num.trim()));
+      const validNumbers = array.filter(num => !isNaN(num));
+
+      if (validNumbers.length === 0) {
+        console.log("No valid numbers found.");
+        return;
+      }
+
+      const sum = validNumbers.reduce((acc, val) => acc + val, 0);
+      const average = sum / validNumbers.length;
+
+      console.log("Average:", average);
+    });
+  </script>
+
+</body>
+</html>

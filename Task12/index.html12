@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 12 - Prime Checker</title>
+</head>
+<body>
+
+  <input type="number" id="number" placeholder="Enter a number">
+  <button id="checkBtn">Check Prime</button>
+
+  <script>
+    document.getElementById("checkBtn").addEventListener("click", function () {
+      const num = parseInt(document.getElementById("number").value);
+
+      if (isNaN(num) || num < 2) {
+        console.log("Please enter a number greater than 1.");
+        return;
+      }
+
+      let isPrime = true;
+
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+          isPrime = false;
+          break;
+        }
+      }
+
+      if (isPrime) {
+        console.log(`${num} is Prime`);
+      } else {
+        console.log(`${num} is Not Prime`);
+      }
+    });
+  </script>
+
+</body>
+</html>

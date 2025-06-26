@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 10 - Age Checker</title>
+</head>
+<body>
+
+  <input type="text" id="username" placeholder="Enter your name">
+  <input type="number" id="age" placeholder="Enter your age">
+  <button id="checkBtn">Check</button>
+
+  <script>
+    document.getElementById("checkBtn").addEventListener("click", function () {
+      const name = document.getElementById("username").value.trim();
+      const age = parseInt(document.getElementById("age").value);
+
+      if (!name || isNaN(age)) {
+        console.log("Please enter both name and valid age.");
+        return;
+      }
+
+      console.log(`Hello, ${name}!`);
+
+      if (age >= 18) {
+        console.log("You are an adult.");
+      } else {
+        console.log("You are a minor.");
+      }
+    });
+  </script>
+
+</body>
+</html>

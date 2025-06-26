@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 9 - Welcome</title>
+</head>
+<body>
+
+  <input type="text" id="username" placeholder="Enter your name">
+  <button id="welcomeBtn">Say Hello</button>
+
+  <script>
+    document.getElementById("welcomeBtn").addEventListener("click", function () {
+      const name = document.getElementById("username").value.trim();
+
+      if (name === "") {
+        console.log("Please enter your name.");
+      } else {
+        console.log(`Hello, ${name}!`);
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 13 - Array Printer</title>
+</head>
+<body>
+
+  <button id="arrayBtn">Generate Array</button>
+
+  <script>
+    document.getElementById("arrayBtn").addEventListener("click", function () {
+      const numbers = [];
+      for (let i = 1; i <= 10; i++) {
+        numbers.push(i);
+      }
+      console.log("Generated Array:", numbers);
+    });
+  </script>
+
+</body>
+</html>

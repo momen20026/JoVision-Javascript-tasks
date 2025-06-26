@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 14 - CSV to Array</title>
+</head>
+<body>
+
+  <input type="text" id="numbersInput" placeholder="Enter numbers separated by commas">
+  <button id="convertBtn">Convert to Array</button>
+
+  <script>
+    document.getElementById("convertBtn").addEventListener("click", function () {
+      const input = document.getElementById("numbersInput").value.trim();
+      
+      if (!input) {
+        console.log("Please enter some numbers.");
+        return;
+      }
+
+      const array = input.split(",").map(num => parseFloat(num.trim()));
+      console.log("Converted Array:", array);
+    });
+  </script>
+
+</body>
+</html>
